@@ -1,25 +1,30 @@
 function setup(){
     createCanvas(800, 600);
-    background(100);
 }
 
 let objBall = {
     x: 12,
     y: 12,
     size:20,
-    offsetX : 10,
+    offsetX : 0,
     color: "#000099"
 };
 
 function draw(){
-    if(mousePressed && (objBall.offsetX>0)){
+    background(200);
+    if(mouseIsPressed){
         console.log("Pressed");
         objBall.offsetX -=1;
     }
-    else if(!mousePressed && (objBall.offsetX<=10)){
+    else{
         console.log("unpressed");
         objBall.offsetX +=1;
     }
+
+    if(objBall.offsetX<0){
+        objBall.offsetX=0;
+    }
+
     fill(objBall.color);
     circle(mouseX+ objBall.offsetX, mouseY, objBall.size);
 }
