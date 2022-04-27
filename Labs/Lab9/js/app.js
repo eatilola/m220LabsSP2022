@@ -13,6 +13,7 @@ let vowels = ["a", "e", "i", "o", "u"];
 function noVowels(){
     userWord =  txtName.value;
     userWord = userWord.split("");
+    console.log(userWord);
     
  console.log(userWord);
     for(let w = 0; w<userWord.length;w++){
