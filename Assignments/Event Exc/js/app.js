@@ -1,9 +1,12 @@
+//get elements from html
 let div = [
     document.getElementById("square"),
     document.getElementById("square2"),
     document.getElementById("square3")
 ]
+
 let size = 200;
+//add on a listener to each square and add same styling
 for(let i = 0; i <div.length;i++){
     div[i].addEventListener("click", reColor);
     div[i].style.height = size + "px";
@@ -15,12 +18,11 @@ for(let i = 0; i <div.length;i++){
 }
 
 
-
+//when square is clicked
 function reColor(event){
-
-    let response = event.target.getAttribute("data-response");
-
-    event.target.style.backgroundColor = response;
-
+//get the data attribute
+let response = event.target.getAttribute("data-response");
+//change the background color to the data attribute
+event.target.style.backgroundColor = response;
 }
 
