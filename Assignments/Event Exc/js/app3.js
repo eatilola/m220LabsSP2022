@@ -1,14 +1,11 @@
-let div = document.getElementById("changeColor");
-let size = 100;
+let state = document.getElementsByClassName("state");
+let dvAnswer = document.getElementById("dvAnswers");
 
-div.style.height = size + "px";
-div.style.width = size + "px";
-div.style.backgroundColor = "blue";
-
-function mouseOne(){
-        div.style.backgroundColor = "black";   
+for (i = 0; i < state.length; i++) {
+  state[i].addEventListener("click", showAnswer);
 }
 
-function mouseTwo(){
-        div.style.backgroundColor = "blue";
+function showAnswer(event) {
+  let answer = event.target.getAttribute("data-answer");
+  dvAnswer.innerHTML = answer;
 }

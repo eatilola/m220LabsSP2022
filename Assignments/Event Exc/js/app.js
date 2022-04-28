@@ -5,24 +5,22 @@ let div = [
 ]
 let size = 200;
 for(let i = 0; i <div.length;i++){
+    div[i].addEventListener("click", reColor);
     div[i].style.height = size + "px";
     div[i].style.width = size + "px";
     div[i].style.backgroundColor = "gray";
+    div[i].style.display = "flex";
+    div[i].style.float = "left";
+    div[i].style.margin = "5px";
 }
 
 
 
-function reColor(num){
+function reColor(event){
 
-    let currSq = num;
+    let response = event.target.getAttribute("data-response");
 
-    for(let i = 0; i< div.length; i++){
-        if(currSq == 0){
-            div[currSq].style.backgroundColor = "red";
-        }
-        else{
-            div[currSq].style.backgroundColor = "green";
-        }
-    }
+    event.target.style.backgroundColor = response;
+
 }
 
