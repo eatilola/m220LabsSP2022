@@ -1,0 +1,82 @@
+@font-face {
+  font-family: RoboL;
+  src: url(fonts/Roboto/Roboto-Light.ttf);
+}
+
+body {
+  background-color: #853434;
+  font-family: RoboL;
+
+}
+
+#background {
+  width: 330px;
+  height: 500px;
+  margin: 0 auto;
+  /* background-color: black; */
+}
+#title {
+  justify-content: center;
+  /* background-color: red; */
+  width: 330px;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+  margin: 30px auto;
+}
+
+#table {
+  width: 330px;
+  height: 330px;
+}
+.spot {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  display: flex;
+  float: left;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 0;
+}
+
+.winner-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 330px;
+  height: 50px;
+  font-size: 25px;
+  color: #fff;
+  /* background-color: red; */
+}
+
+#resetButton {
+  width: 330px;
+  height: 50px;
+  margin: 30px auto;
+  border: 3px solid #853434;
+  border-radius: 40px;
+  background-color: #fff;
+  color: #853434;
+  font-size: 20px;
+  display: none;
+}
+#resetButton:hover {
+  border: 3px solid #fff;
+  background-color: #853434;
+  color: #fff;
+  cursor: pointer;
+}
+
+#gameovercover {
+  width: 330px;
+  height: 330px;
+  margin: -330px auto 0 auto;
+  /* background-color: red; */
+  /* border: 5px solid red; */
+  position: absolute;
+  display: none;
+}
