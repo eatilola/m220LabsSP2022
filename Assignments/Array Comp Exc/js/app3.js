@@ -18,19 +18,25 @@ function badwordCheck() {
       splitSentence[i] == "tires"
     ) {
       console.log("found bad word");
-      count = count + 1;
+       //add one to count
+       count = count + 1;
+      }
+      console.log(splitSentence[i]);
     }
-    console.log(splitSentence[i]);
-  }
-  if (count == 0) {
-        result = "No bad words were found";
-    console.log(result);
-    dvMessage.innerHTML = result;
-  }
-  else {
-        result = "Some bad words were found" + "\n" + "There were " + count + " bad words";
-    console.log(result);
-    dvMessage.innerHTML = result;
-  }
+    //if count equals 0 no bad words were said
+    if (count == 0) {
+      //print in console and HTML
+      console.log("No bad words were found");
+      dvMessage.innerHTML = "No bad words were found";
+    }
+    //else a bad word was said
+    else {
+      //print in console and HTML
+      console.log("Some bad words were found");
+      console.log("There were " + count + " bad words");
+      dvMessage.innerHTML =
+        "Some bad words were found. There were " + count + " bad words.";
+    }
+    //reset txtString to empty
   txtString.value = " ";
 }
