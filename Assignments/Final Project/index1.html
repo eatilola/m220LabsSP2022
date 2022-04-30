@@ -11,6 +11,15 @@
     <div id="background">
         <div id="title">Tic - Tac - Toe</div>
     <div id="table">
+
+        <div class="winner-holder">
+            <div id="user">Player 1: 0 </div>
+            <div id="computer">Player 2: 0 </div>
+        </div>
+        <div class="winner-holder">
+            <div id="tie">Tie: 0 </div>
+        </div>
+
         <div data-spot = "1" class="spot"></div>
         <div data-spot = "2" class="spot"></div>
         <div data-spot = "3" class="spot"></div>
@@ -24,15 +33,8 @@
         <div data-spot = "9" class="spot"></div>
 
         <div id="winner"></div>
-        <button id = "resetButton" onclick="resetGame(spot)"> Do you want to play again?</button>
+        <button id = "resetButton" onclick="resetGame(spot)"> Play again?</button>
 
-        <div class="winner-holder">
-            <div id="user">Player 1: 0 </div>
-            <div id="computer">Player 2: 0 </div>
-        </div>
-        <div class="winner-holder">
-            <div id="tie">Tie: 0 </div>
-        </div>
         
     </div>
     <div id="gameovercover"></div>
